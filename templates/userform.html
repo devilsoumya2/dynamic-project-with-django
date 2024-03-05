@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+  {% block content %}
+  <section class="contact" id="contact">
+    <h1 class="heading">user <span>form</span> </h1>
+    <div  class="row">
+        <form method="POST" action="{% url 'submitform' %}" >
+            {% csrf_token %}
+          <div  class="row">
+            <!-- <div class="col-100"> -->
+              {{form}}
+                   
+                    <!-- <div>
+                      <h1><lable for="">value1</lable></h1>  
+                    <input type="text" name="num1" value="{{n1}}" placeholder="First name:" required/><br><br>
+                       
+                    </div>
+                    <div class="pt-4">
+                      <h1><lable for="">value2</lable></h1> 
+                      <input type="text" name="num2" value="{{n2}}" placeholder="second name:"  required/><br><br>
+                        -->
+                    </div>
+                    <div class="pt-4">
+                      <button type="submit">save</button>
+                    </div><br><br>
+                   
+                    output
+                    <input type="text" value="{{output}}"/>
+                </form>
+            </div>
+          </div>
+
+          
+        </form>
+    </div>
+</section>
+{% endblock %}
